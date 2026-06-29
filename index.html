@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verdana Kitchen — Fresh. Local. Yours.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header id="mainHeader">
+  <a href="#hero" class="logo">Verdana<span>.</span></a>
+  <nav>
+    <div class="dropdown-nav">
+      <a>Menu</a>
+      <div class="dropdown-menu">
+        <a href="#menu">All Dishes</a>
+        <a href="#menu">Breakfast</a>
+        <a href="#menu">Lunch</a>
+        <a href="#menu">Dinner</a>
+        <a href="#menu">Seasonal</a>
+      </div>
+    </div>
+    <a href="#recipes">Recipes</a>
+    <a href="#order">Our Story</a>
+    <a href="#register" class="btn-nav">Get Started</a>
+  </nav>
+  <div class="burger" id="burger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#hero" class="mobile-close">Home</a>
+  <a href="#menu" class="mobile-close">Menu</a>
+  <a href="#order" class="mobile-close">Our Story</a>
+  <a href="#recipes" class="mobile-close">Recipes</a>
+  <a href="#register" class="mobile-close">Get Started</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-tag">🌿 Farm to Table</div>
+      <h1 class="hero-title">
+        Real food,<br>real <em>flavour</em>,<br>real care.
+      </h1>
+      <p class="hero-desc">
+        Handcrafted meals from local farms, delivered fresh to your door every morning. No preservatives, no compromises — just honest, seasonal cooking.
+      </p>
+      <div class="hero-btns">
+        <a href="#menu" class="btn-primary">Explore Our Menu</a>
+        <a href="#register" class="btn-ghost">Join the Kitchen</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="food-circle">
+        <span class="food-badge one">🥕 Farm Fresh</span>
+        <span class="food-badge two">🌾 No GMO</span>
+        <span class="food-badge three">⭐ Chef's Pick</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MENU ── -->
+<section id="menu">
+  <div class="section-inner">
+    <div class="menu-header reveal">
+      <div>
+        <div class="section-label">Our Dishes</div>
+        <h2 class="section-title">Made with intention,<br>served with love.</h2>
+      </div>
+      <div>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;font-weight:500;">Filter by category:</p>
+        <div class="multiselect-wrap" id="filterTags">
+          <button class="ms-tag active" data-cat="all">All</button>
+          <button class="ms-tag" data-cat="vegan">Vegan</button>
+          <button class="ms-tag" data-cat="protein">Protein</button>
+          <button class="ms-tag" data-cat="salads">Salads</button>
+          <button class="ms-tag" data-cat="soups">Soups</button>
+        </div>
+      </div>
+    </div>
+    <div class="menu-grid" id="menuGrid">
+      <article class="menu-card reveal" data-cat="salads">
+        <div class="card-img green">🥗</div>
+        <div class="card-body">
+          <div class="card-cat">Salads</div>
+          <h3 class="card-title">Garden Harvest Bowl</h3>
+          <p class="card-desc">Mixed greens, heirloom tomatoes, roasted chickpeas, tahini drizzle.</p>
+          <div class="card-footer">
+            <span class="card-price">$12.50</span>
+            <button class="card-btn">Add to Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="menu-card reveal" data-cat="protein">
+        <div class="card-img orange">🍗</div>
+        <div class="card-body">
+          <div class="card-cat">Protein</div>
+          <h3 class="card-title">Herb Lemon Chicken</h3>
+          <p class="card-desc">Free-range chicken, charred lemon, rosemary oil, cauliflower purée.</p>
+          <div class="card-footer">
+            <span class="card-price">$16.00</span>
+            <button class="card-btn">Add to Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="menu-card reveal" data-cat="soups">
+        <div class="card-img red">🍲</div>
+        <div class="card-body">
+          <div class="card-cat">Soups</div>
+          <h3 class="card-title">Roasted Tomato Bisque</h3>
+          <p class="card-desc">Slow-roasted vine tomatoes, basil oil, hand-torn croutons.</p>
+          <div class="card-footer">
+            <span class="card-price">$9.00</span>
+            <button class="card-btn">Add to Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="menu-card reveal" data-cat="vegan">
+        <div class="card-img purple">🍆</div>
+        <div class="card-body">
+          <div class="card-cat">Vegan</div>
+          <h3 class="card-title">Aubergine &amp; Lentil Stew</h3>
+          <p class="card-desc">Smoked aubergine, Puy lentils, pomegranate molasses, fresh mint.</p>
+          <div class="card-footer">
+            <span class="card-price">$13.50</span>
+            <button class="card-btn">Add to Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="menu-card reveal" data-cat="vegan">
+        <div class="card-img yellow">🌽</div>
+        <div class="card-body">
+          <div class="card-cat">Vegan</div>
+          <h3 class="card-title">Golden Corn Polenta</h3>
+          <p class="card-desc">Creamy polenta, charred corn, sautéed mushrooms, truffle oil.</p>
+          <div class="card-footer">
+            <span class="card-price">$14.00</span>
+            <button class="card-btn">Add to Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="menu-card reveal" data-cat="protein">
+        <div class="card-img blue">🐟</div>
+        <div class="card-body">
+          <div class="card-cat">Protein</div>
+          <h3 class="card-title">Atlantic Salmon Fillet</h3>
+          <p class="card-desc">Wild-caught salmon, dill butter, asparagus, preserved lemon.</p>
+          <div class="card-footer">
+            <span class="card-price">$18.50</span>
+            <button class="card-btn">Add to Order</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── ORDER / TO-DO ── -->
+<section id="order">
+  <div class="section-inner">
+    <div class="order-grid">
+      <div class="order-info reveal-left">
+        <div class="section-label">Why Verdana</div>
+        <h2 class="section-title">Ingredients you can trust, every single time.</h2>
+        <p>We work directly with farms within 80 miles of our kitchen. Every ingredient is traceable, seasonal, and handled with care from soil to spoon.</p>
+        <ul class="features-list">
+          <li>100% locally sourced produce from partner farms</li>
+          <li>Prepared fresh each morning, never frozen</li>
+          <li>Eco-friendly packaging, fully compostable</li>
+          <li>Nutritionist-approved meals for every goal</li>
+          <li>Flexible plans — skip, pause, or cancel anytime</li>
+        </ul>
+      </div>
+      <div class="reveal-right">
+        <div class="todo-panel">
+          <h4>🛒 My Weekly Order List</h4>
+          <div class="todo-input-row">
+            <input class="todo-input" id="todoInput" type="text" placeholder="Add a dish or item..." />
+            <button class="todo-add" id="todoAdd">+ Add</button>
+          </div>
+          <ul class="todo-list" id="todoList">
+            <li class="todo-item" data-id="1">
+              <input type="checkbox" />
+              <span>Garden Harvest Bowl × 2</span>
+              <button class="todo-delete">✕</button>
+            </li>
+            <li class="todo-item" data-id="2">
+              <input type="checkbox" />
+              <span>Herb Lemon Chicken</span>
+              <button class="todo-delete">✕</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RECIPES / FETCH ── -->
+<section id="recipes">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto 8px">
+      <div class="section-label">From Our Kitchen</div>
+      <h2 class="section-title">Chef's tips &amp; weekly recipe cards.</h2>
+      <p class="section-sub" style="margin:0 auto">Pulled fresh from our community feed — cooking ideas from our head chefs, updated weekly.</p>
+    </div>
+    <div style="text-align:center">
+      <button class="btn-reload" id="fetchBtn">🔄 Load Recipe Tips</button>
+    </div>
+    <div id="recipesGrid" class="recipes-grid" style="display:none"></div>
+    <div id="fetchLoader" class="fetch-loader" style="display:none">⏳ Loading recipes...</div>
+  </div>
+</section>
+
+<!-- ── REGISTER ── -->
+<section id="register">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center;max-width:540px;margin:0 auto 16px">
+      <div class="section-label" style="color:var(--saffron)">Join the Kitchen</div>
+      <h2 class="section-title">Fresh meals start with one simple step.</h2>
+      <p class="section-sub">Create your free account and start your first week at 20% off. Cancel anytime.</p>
+    </div>
+    <div class="register-wrap">
+      <ul class="register-perks reveal-left">
+        <li>
+          <span class="perk-icon">🎁</span>
+          <div class="perk-text">
+            <strong>First Week 20% Off</strong>
+            Apply at checkout — no code needed.
+          </div>
+        </li>
+        <li>
+          <span class="perk-icon">🚚</span>
+          <div class="perk-text">
+            <strong>Free Delivery Always</strong>
+            No minimum order, no hidden fees.
+          </div>
+        </li>
+        <li>
+          <span class="perk-icon">🔄</span>
+          <div class="perk-text">
+            <strong>Fully Flexible Plans</strong>
+            Skip weeks or pause with one click.
+          </div>
+        </li>
+        <li>
+          <span class="perk-icon">🌿</span>
+          <div class="perk-text">
+            <strong>Seasonal Menu Updates</strong>
+            New dishes every week based on what's fresh.
+          </div>
+        </li>
+      </ul>
+      <div class="register-form reveal-right">
+        <h3>Create Your Account</h3>
+        <div id="registerFormWrap">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="John" id="regFirst" />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Doe" id="regLast" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="john@example.com" id="regEmail" />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <div class="pw-wrap">
+              <input type="password" placeholder="Create a password" id="regPw" />
+              <button class="pw-toggle" id="pwToggle1" type="button" title="Show/hide password">👁</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Confirm Password</label>
+            <div class="pw-wrap">
+              <input type="password" placeholder="Repeat password" id="regPwConfirm" />
+              <button class="pw-toggle" id="pwToggle2" type="button" title="Show/hide password">👁</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Meal Plan</label>
+            <select id="regPlan">
+              <option value="">Select a plan...</option>
+              <option>Starter — 3 meals/week</option>
+              <option>Classic — 5 meals/week</option>
+              <option>Family — 8 meals/week</option>
+            </select>
+          </div>
+          <button class="btn-submit" id="regSubmit">Create My Account →</button>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">🎉</div>
+          <h4>Welcome to Verdana Kitchen!</h4>
+          <p>Your account has been created. Check your email for a confirmation link and your 20% discount code.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="font-size:1.4rem">Verdana<span>.</span></div>
+      <p>Handcrafted meals from local farms, delivered fresh every morning. Real ingredients, real care.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn">𝕏</a>
+        <a href="#" class="social-btn">in</a>
+        <a href="#" class="social-btn">ig</a>
+        <a href="#" class="social-btn">yt</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Menu</h5>
+      <a href="#menu">All Dishes</a>
+      <a href="#menu">Vegan</a>
+      <a href="#menu">Protein</a>
+      <a href="#menu">Seasonal</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="#">Our Story</a>
+      <a href="#">Our Farms</a>
+      <a href="#">Careers</a>
+      <a href="#">Press</a>
+    </div>
+    <div class="footer-col">
+      <h5>Support</h5>
+      <a href="#">FAQ</a>
+      <a href="#">Delivery Info</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Verdana Kitchen Ltd. All rights reserved.</span>
+    <span>Made with 🌿 and local love.</span>
+  </div>
+</footer>
+
+<!-- ── SCROLL TO TOP ── -->
+<button id="scrollTop" aria-label="Scroll to top">↑</button>
+
+<!-- ── COOKIE ── -->
+<div id="cookie">
+  <p>🍪 We use cookies to improve your experience, personalise content, and analyse traffic. You can manage your preferences anytime.</p>
+  <div class="cookie-btns">
+    <button class="btn-cookie-accept" id="cookieAccept">Accept All</button>
+    <button class="btn-cookie-decline" id="cookieDecline">Decline</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
